@@ -10,7 +10,7 @@ A榜第五，B榜第七
 
 我用的是pytorch框架，deepfiilv2无法转paddle模型，所以转的onnx
 
-用的parcharm运行，不喜欢用notebook，你按我说的来可以复现
+没有保存checkpoints, 用的parcharm运行，不喜欢用notebook，你按我说的来可以复现
 
 该项目基于 https://github.com/zhaoyuzhi/deepfillv2 更改
 
@@ -64,6 +64,12 @@ A榜第五，B榜第七
 
 粗修图（左）没有修复出边框，精修图（右）修复出大致的边框
 ##  2 代码说明
+
+模型下载地址
+
+链接：https://pan.baidu.com/s/1kSQj1JOZF1ExCUa74SV63g 
+
+提取码：a350
 
 ### 2.1 Train Deeplabv3
 
