@@ -142,7 +142,7 @@ python convert.py   --deepfillv2_generator_pretrain './pytorch_model/deepfillv2_
 运行predict_onnx.py预测图片，你需要设置要预测的图片文件夹路径，以及onnx模型保存的路径(和名字)，注意imgsize, imgresize要与前面一样。
 ```bash
 python predict_onnx.py  --src_image_dir 'test_img'
-                        --save_dir test_img_predict
+                        --save_dir 'test_img_predict'
                         --imgsize 1536
                         --imgresize 6
                         --deeplabv3_onnx './onnx_model/deeplabv3_resnet50.onnx'
@@ -158,5 +158,5 @@ python predict_onnx.py  --src_image_dir 'test_img'
 * torchvision == 0.11.2
 * onnxruntime == 1.12.1
 * cv2 == 4.5.5
-* transformers==4.21.1   
-* numpy==1.22.4
+* transformers == 4.21.1   
+* numpy == 1.22.4
