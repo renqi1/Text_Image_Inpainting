@@ -8,7 +8,7 @@ A榜第五，B榜第七
 
 我觉得很不合理，为什么公布B榜，一般比赛都不公布B的呀，人均B比A高，就我低了，哎
 
-我用的是pytorch框架，deepfiilv2无法转paddle模型，所以转的onnx
+我用的是pytorch框架，deepfillv2无法转paddle模型，所以转的onnx
 
 没有保存checkpoints, 用的parcharm运行，不喜欢用notebook，你按我说的来可以复现
 
@@ -54,7 +54,7 @@ A榜第五，B榜第七
 
 <img src="./readme_img/method.jpg" width="800px"/>
 
-裁剪的区域边长l = 1536， 缩放因子r = 6， 缩放后图像大小为256×256再位于InpaintingNet.
+裁剪的区域边长l=1536， 缩放因子r=6， 缩放后图像大小为256×256再位于InpaintingNet. （我还试过l=1792, r=8; l=1920, r=6等尺度，效果没那么好）
 
 
 
@@ -149,7 +149,16 @@ python predict_onnx.py  --src_image_dir 'test_img'
                         --deepfillv2_onnx './onnx_model/deepfillv2_G.onnx'
 ```
 
-## 3 代码运行环境
+
+## 3 待改进点
+
+分割网络貌似对B榜效果不好，但我决不会根据B榜再训练微调我在A榜训练出来的模型！！！效果不好我也交！可以换其他分割网络或者用resnet101骨干效果会好一些。
+
+图像训练时没有加翻转，亮度变换等增强策略，可能加了会有提升。
+
+GAN网络我不太会调参，不知道怎么训练出好的效果，我训练3个epoch后再训练下去没有提升了，感觉训练得有点少。
+
+## 4 代码运行环境
 * GPU RTX3090
 * ubuntu 20.04.1
 * cuda == 11.3
